@@ -1,0 +1,75 @@
+#img {
+	width: 100px;
+	height: 100px;
+}
+.max-imag-load-dialog {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background: rgba(255, 255, 255, 1);
+}
+
+.max-imag-loading-cont {
+    position: absolute;
+    top: 0px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.max-imag-loading {
+    /* margin: 0 auto; */
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    background: url(../img/loading1.png) no-repeat;
+    background-size: 30px 30px;
+    background-position: center center;
+    opacity: .4;
+    animation: rotateCircle linear 1s infinite;
+    pointer-events: none;
+}
+
+@keyframes rotateCircle{
+	0%{
+        transform: rotate(0deg);
+    }
+	50%{
+        transform: rotate(180deg);
+    }
+    100%{
+    	transform: rotate(360deg);
+    }
+}
+
+@keyframes max-statef{
+	0%{
+        width: 100px;
+        opacity: .5;
+    }
+	50%{
+        width: 150px;
+        opacity: .8;
+    }
+    100%{
+    	width: 200px;
+        opacity: 1;
+    }
+}
+
+.max-imag-load-img {
+    width: 100px;
+    max-height: 100px;
+    opacity: .5;
+}
+
+.max-state {
+	width: 200px;
+    max-height: 200px;
+    opacity: 1;
+    animation: max-statef linear .5s;
+}
